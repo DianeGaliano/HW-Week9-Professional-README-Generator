@@ -1,0 +1,23 @@
+{
+  "name": "HW-Week9-Professional-README-Generator",
+  "version": "1.0.0",
+  "description": "${motivation}\r ${why}\r ${problem}\r ${learn}\r ${project}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DianeGaliano/Week9-HW-Professional-README-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DianeGaliano/Week9-HW-Professional-README-Generator/issues"
+  },
+  "homepage": "https://github.com/DianeGaliano/Week9-HW-Professional-README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  }
+}
