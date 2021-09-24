@@ -1,8 +1,14 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Choice = require("inquirer/lib/objects/choice");
 
 inquirer
     .prompt([
+        {
+            type: "input",
+            name: "title",
+            message: "What is the title of your project?"
+        },
         {
             type: "input",
             name: "motivation",
@@ -40,23 +46,51 @@ inquirer
         },
         {
             type: "input",
-            name: "colab",
-            message: "List your collaborators, if any, with links to their GitHub profiles."
-        },
-        {
-            type: "input",
             name: "usage",
             message: "Provide instructions and examples for use."
         },
         {
             type: "input",
+            name: "colab",
+            message: "List your collaborators, if any, with links to their GitHub profiles."
+        },
+        {
+            type: "checkbox",
             name: "usage",
-            message: "What license does your project have?"
-        
+            message: "What license does your project have?",
+            choices: ["MIT License", "GNU v3.0 License", "Communities License", "N/A"]        
+        },
+        {
+            type: "input",
+            name: "features",
+            message: "What are some of your projects features?"
         },
     ])
     .then((response) => {
-       const readMeString = `` 
+       const readMeString = `
+                 # <${title}>
+                ## Description
+                ${motivation}
+                ${why}
+                ${problem}
+                ${learn}
+                ${project}
+
+
+                ## Usage
+                ${usage}
+
+                ## Credits
+                ${colab}
+
+                ## License
+                ${license}
+
+                ## Features
+                ${features}
+
+
+       ` 
     }
 
 //README Questions:
@@ -66,4 +100,5 @@ inquirer
 // What did you learn?
 // What makes your project stand out?
 //Provide instructions and examples for use.
+//What licenses does your project have.
 //List your collaborators, if any, with links to their GitHub profiles.
