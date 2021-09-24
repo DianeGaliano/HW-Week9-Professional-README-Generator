@@ -90,8 +90,16 @@ inquirer
                 ${features}
 
 
-       ` 
-    }
+       ` ;
+       fs.writeFile("README.md", readMeString, (err)=> {
+           if (!err) {
+               console.log("Sucess!")
+           }
+       }
+       
+       );
+   });
+
 
 //README Questions:
 // What was your motivation?
