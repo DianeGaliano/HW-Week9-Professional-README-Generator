@@ -41,16 +41,6 @@ inquirer
         },
         {
             type: "input",
-            name: "usage",
-            message: "Provide instructions and examples for use."
-        },
-        {
-            type: "input",
-            name: "usage",
-            message: "Provide instructions and examples for use."
-        },
-        {
-            type: "input",
             name: "colab",
             message: "List your collaborators, if any, with links to their GitHub profiles."
         },
