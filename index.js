@@ -56,7 +56,7 @@ inquirer
         },
         {
             type: "checkbox",
-            name: "usage",
+            name: "license",
             message: "What license does your project have?",
             choices: ["MIT License", "GNU v3.0 License", "Communities License", "N/A"]        
         },
@@ -68,29 +68,29 @@ inquirer
     ])
     .then((response) => {
        const readMeString = `
-                 # <${title}>
+                 #${response.title}
                 ## Description
-                ${motivation}
-                ${why}
-                ${problem}
-                ${learn}
-                ${project}
+                ${response.motivation}
+                ${response.why}
+                ${response.problem}
+                ${response.learn}
+                ${response.project}
 
 
                 ## Usage
-                ${usage}
+                ${response.usage}
 
                 ## Credits
-                ${colab}
+                ${response.colab}
 
                 ## License
-                ${license}
+                ${response.license}
 
                 ## Features
-                ${features}
+                ${response.features}
 
 
-       ` ;
+       `;
        fs.writeFile("README.md", readMeString, (err)=> {
            if (!err) {
                console.log("Sucess!")
