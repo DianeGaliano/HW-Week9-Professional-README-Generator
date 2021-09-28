@@ -34,6 +34,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(response) {
   return `
   # <${response.title}>
+  ${renderLicenseBadge (response.license)}
   ## Description
   ${response.description}
   
@@ -53,6 +54,8 @@ function generateMarkdown(response) {
   ${response.usage}
   
   ## License
+  ${renderLicenseLink (response.license)}
+  ${renderLicenseSection (response.license)}
   ${response.license}
   
   ## Contributing
