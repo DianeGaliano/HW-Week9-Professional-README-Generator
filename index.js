@@ -33,7 +33,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "What license does your project have?",
-        choices: ["[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)", "AUR license", "Bower", "Cocoapods", "Conda - License", "CPAN", "CRAN/METACRAN", "Crates.io", "Crates"]        
+        choices: ["Appache", "Boost Software License 1.0", "BSD", "Eclipse Public License 1.0"]        
     },
     {
         type: "input",
