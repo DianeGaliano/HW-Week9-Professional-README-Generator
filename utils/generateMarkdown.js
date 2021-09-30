@@ -30,13 +30,13 @@ function renderLicenseLink (license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === "Appache") {
-    return `<a rel="license" href="https://opensource.org/licenses/Apache-2.0"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
+    return `<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
   } else if(license === "Boost Software License 1.0") {
-    return `<a rel="license" href="https://www.boost.org/LICENSE_1_0.txt"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
+    return `<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
   } else if(license === "BSD") {
-    return `<a rel="license" href="https://opensource.org/licenses/BSD-3-Clause"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
+    return `<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
   } else {
-    return `<a rel="license" href="https://opensource.org/licenses/EPL-1.0"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
+    return `<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.`
   }
 };
 
@@ -48,7 +48,7 @@ const generateMarkdown = (data) => {
   ${data.description}
   
   ## Table of Contents
-  - [Description](#usage)
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -57,14 +57,14 @@ const generateMarkdown = (data) => {
   - [Questions](#questions)
   
   ## Installation
-  ${data.installation}
+  ${data.insallation}
   
   ## Usage
   ${data.usage}
   
   ## License
-  ${renderLicenseSection(data.license)}
   ${renderLicenseLink(data.license)}
+  ${renderLicenseSection(data.license)}
   
 
   
