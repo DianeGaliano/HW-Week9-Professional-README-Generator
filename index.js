@@ -34,12 +34,12 @@ inquirer
             type: "checkbox",
             name: "license",
             message: "What license does your project have?",
-            choices: ["Appache", "Boost Software License 1.0", "BSD", "Eclipse Public License 1.0"]        
+            choices: ["Appache", "Boost Software License 1.0", "BSD", "Eclipse Public License 1.0","No license"]        
         },
         {
             type: "input",
             name: "test",
-            message: "Write tests for your application. Then provide examples on how to run them here"
+            message: "What are some tests and their results of your project?"
         },
         {
             type: "input",
